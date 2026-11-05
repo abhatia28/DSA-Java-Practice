@@ -1,0 +1,11 @@
+public class VarblesBasics {
+ public statc void main(Strinng[] args ) {
+  int x = 5;           // container
+System.out.println( x + 7) ;
+ int y;              // decclaration
+  y  = 6;           // initiliation
+System.out.print ( x - y);
+
+
+}
+}

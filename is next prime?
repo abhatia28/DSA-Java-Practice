@@ -1,0 +1,28 @@
+here to find is next number is prime..
+
+class Solution {
+    public static int nextPrime(int n) {
+        int num = n + 1;
+
+        while (true) {
+            boolean isPrime = true;       
+
+            if (num < 2) {
+                isPrime = false;
+            }                                   // no num less than 2 is prime
+
+            for (int i = 2; i * i <= num; i++) {
+                if (num % i == 0) {
+                    isPrime = false;                // i isnumber givne mumltiply it by itslef and divide from 2 to till the num get by i x i find if ==0 false 
+                    break;
+                }
+            }
+
+            if (isPrime) {               // if there is not 0 then return number its prime
+                return num;
+            }
+
+            num++;
+        }
+    }
+}

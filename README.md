@@ -1,2 +1,5 @@
 # DSA-Java-Practice
-Trying to do some Dsa with Java
+To Try to do some Dsa with Java
+have t doo java 
+practice is here start with basic concepts
+

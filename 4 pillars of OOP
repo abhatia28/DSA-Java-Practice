@@ -33,3 +33,135 @@ public class Main {
         System.out.println(b.getBalance());
     }
 }
+
+
+
+
+
+
+
+2. Abstraction
+
+Abstraction means hiding implementation details and showing only the necessary functionality to the user.
+
+In Java, we can achieve abstraction using:
+- Abstract classes
+- Interfaces
+Main purpose: Hide unnecessary details.
+
+
+abstract class Vehicle {
+
+    abstract void start();
+
+    void stop() {
+        System.out.println("Vehicle stopped");
+    }
+}
+
+class Car extends Vehicle {
+
+    void start() {
+        System.out.println("Car started");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Car c = new Car();
+
+        c.start();
+        c.stop();
+    }
+}
+
+
+
+3. Inheritance
+
+Inheritance means one class acquires the properties and methods of another class.
+
+We use the extends keyword in Java.
+
+Main purpose: Code reusability.
+
+class Animal {
+
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog extends Animal {
+
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Dog d = new Dog();
+
+        d.eat();
+        d.bark();
+    }
+}
+
+
+
+4. Polymorphism
+
+Polymorphism means "many forms." The same method/interface can behave differently depending on the object or parameters.
+
+Two types:
+
+Compile-time polymorphism → Method Overloading
+
+Runtime polymorphism → Method Overriding
+
+Main purpose: Same interface/method name, different behavior.
+
+
+
+
+
+Code for Understanding all
+
+
+
+class Animal {
+
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Animal a1 = new Dog();
+        Animal a2 = new Cat();
+
+        a1.sound();
+        a2.sound();
+    }
+}

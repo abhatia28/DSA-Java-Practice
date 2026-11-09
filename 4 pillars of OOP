@@ -1,0 +1,35 @@
+Here 4 pillars of OOP
+
+1. Encapsulation
+
+Encapsulation means wrapping data and methods inside a class and restricting direct access to the data.
+
+We normally use:
+- private variables
+- public getter/setter methods
+Main purpose: Data protection.
+
+class BankAccount {
+    private int balance = 10000;
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        BankAccount b = new BankAccount();
+
+        System.out.println(b.getBalance());
+
+        b.setBalance(15000);
+
+        System.out.println(b.getBalance());
+    }
+}
